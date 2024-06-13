@@ -1,1 +1,7 @@
-20.0
+10 + 10 = 20.0
+20 / 10 = 2.0
+30 * 3 = 90.0
+100 - 90 = 10.0
+1000 / 0 = Error! Division by zero
+5r + 1 = Error! Not number
+24 _ 2 = Operation Error!
