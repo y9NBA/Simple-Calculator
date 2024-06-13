@@ -32,20 +32,28 @@ public class Main {
 
             switch (operation) {
                 case "+":
-                    System.out.println(number1 + number2);
+                    output += number1 + number2;
                     break;
                 case "-":
-                    System.out.println(number1 - number2);
+                    output += number1 - number2;
                     break;
                 case "*":
-                    System.out.println(number1 * number2);
+                    output += number1 * number2;
                     break;
                 case "/":
-                    System.out.println(number1 / number2);
+                    output += number1 / number2;
                     break;
             }
         } catch (NumberFormatException ex) {
             System.out.println("Error! Not number");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        try (FileWriter writer = new FileWriter("output.txt", false)) {
+            writer.write(output);
+
+            writer.flush();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
